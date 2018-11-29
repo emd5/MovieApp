@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="NuGet.Core" Version="2.14.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+
+
+    <PackageReference Include="jQuery" Version="3.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.1" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\HelloWorld.cshtml" />
+    <Content Remove="Views\Movies\Movies\Create.cshtml" />
+    <Content Remove="Views\Movies\Movies\Delete.cshtml" />
+    <Content Remove="Views\Movies\Movies\Details.cshtml" />
+    <Content Remove="Views\Movies\Create.cshtml" />
+    <Content Remove="Views\Movies\Delete.cshtml" />
+    <Content Remove="Views\Movies\Details.cshtml" />
+    <Content Remove="Views\Movies\Edit.cshtml" />
+    <Content Remove="Views\Movies\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\HelloWorld\" />
+    <Folder Include="Views\Movies\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\HelloWorld\EmptyHTMLFile.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Movies\Create.cshtml" />
+    <None Include="Views\Movies\Delete.cshtml" />
+    <None Include="Views\Movies\Details.cshtml" />
+    <None Include="Views\Movies\Edit.cshtml" />
+    <None Include="Views\Movies\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\MovieSearchLogic.cs" />
+    <Compile Remove="Migrations\20181120175436_InitialCreate.cs" />
+    <Compile Remove="Migrations\20181128214938_InitialCreate.cs" />
+  </ItemGroup>
+</Project>
